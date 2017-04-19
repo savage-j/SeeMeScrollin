@@ -15,6 +15,7 @@
 		6CA9E3F71EA56F74009FA609 /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 6CA9E3F61EA56F74009FA609 /* articles.json */; };
 		6CA9E3F91EA571FF009FA609 /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA9E3F81EA571FF009FA609 /* ArticleTableViewController.swift */; };
 		6CA9E3FB1EA5724C009FA609 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA9E3FA1EA5724C009FA609 /* ArticleTableViewCell.swift */; };
+		C5BD36AA36C39BFDBE0ECA8E /* Pods_SeeMeScrollin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8EBFC72187C586A221D442 /* Pods_SeeMeScrollin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		6CA9E3F61EA56F74009FA609 /* articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
 		6CA9E3F81EA571FF009FA609 /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
 		6CA9E3FA1EA5724C009FA609 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		6FA00EBD573AD4877BA3761C /* Pods-SeeMeScrollin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeMeScrollin.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeeMeScrollin/Pods-SeeMeScrollin.release.xcconfig"; sourceTree = "<group>"; };
+		865582EF1F647A9495C79378 /* Pods-SeeMeScrollin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeMeScrollin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeeMeScrollin/Pods-SeeMeScrollin.debug.xcconfig"; sourceTree = "<group>"; };
+		CC8EBFC72187C586A221D442 /* Pods_SeeMeScrollin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeeMeScrollin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5BD36AA36C39BFDBE0ECA8E /* Pods_SeeMeScrollin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CD4FEA9770D0465F958009A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				865582EF1F647A9495C79378 /* Pods-SeeMeScrollin.debug.xcconfig */,
+				6FA00EBD573AD4877BA3761C /* Pods-SeeMeScrollin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2AE945692E77C136C2EA5648 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC8EBFC72187C586A221D442 /* Pods_SeeMeScrollin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6CA9E3CE1EA535CB009FA609 = {
 			isa = PBXGroup;
 			children = (
 				6CA9E3D91EA535CB009FA609 /* SeeMeScrollin */,
 				6CA9E3D81EA535CB009FA609 /* Products */,
+				1CD4FEA9770D0465F958009A /* Pods */,
+				2AE945692E77C136C2EA5648 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CA9E3E91EA535CB009FA609 /* Build configuration list for PBXNativeTarget "SeeMeScrollin" */;
 			buildPhases = (
+				200A8891C99E3B98894FCDFD /* [CP] Check Pods Manifest.lock */,
 				6CA9E3D31EA535CB009FA609 /* Sources */,
 				6CA9E3D41EA535CB009FA609 /* Frameworks */,
 				6CA9E3D51EA535CB009FA609 /* Resources */,
+				5DCD32166AD27B8D06C93257 /* [CP] Embed Pods Frameworks */,
+				910273C8CFD33AE401EC8AFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,6 +168,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		200A8891C99E3B98894FCDFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5DCD32166AD27B8D06C93257 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeeMeScrollin/Pods-SeeMeScrollin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		910273C8CFD33AE401EC8AFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeeMeScrollin/Pods-SeeMeScrollin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6CA9E3D31EA535CB009FA609 /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		6CA9E3EA1EA535CB009FA609 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 865582EF1F647A9495C79378 /* Pods-SeeMeScrollin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NXUBBPUQV8;
@@ -284,6 +360,7 @@
 		};
 		6CA9E3EB1EA535CB009FA609 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FA00EBD573AD4877BA3761C /* Pods-SeeMeScrollin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NXUBBPUQV8;
