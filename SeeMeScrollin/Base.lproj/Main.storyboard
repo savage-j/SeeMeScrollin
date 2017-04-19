@@ -50,7 +50,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="J36-IA-ir8">
-                        <barButtonItem key="rightBarButtonItem" title="RSS" id="Eta-U4-41C"/>
+                        <barButtonItem key="rightBarButtonItem" title="RSS" id="Eta-U4-41C">
+                            <connections>
+                                <action selector="loadRSSFeed:" destination="OKn-8A-eYH" id="0ft-eP-JxR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTO-Xb-vcY" userLabel="First Responder" sceneMemberID="firstResponder"/>

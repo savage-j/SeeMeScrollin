@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C3C815C1EA729CE008E6D10 /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3C815B1EA729CE008E6D10 /* RSSParser.swift */; };
 		6CA9E3DB1EA535CB009FA609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA9E3DA1EA535CB009FA609 /* AppDelegate.swift */; };
 		6CA9E3E01EA535CB009FA609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA9E3DE1EA535CB009FA609 /* Main.storyboard */; };
 		6CA9E3E21EA535CB009FA609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CA9E3E11EA535CB009FA609 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C3C815B1EA729CE008E6D10 /* RSSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
 		6CA9E3D71EA535CB009FA609 /* SeeMeScrollin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeMeScrollin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA9E3DA1EA535CB009FA609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CA9E3DF1EA535CB009FA609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				6CA9E3F61EA56F74009FA609 /* articles.json */,
 				6CA9E3F81EA571FF009FA609 /* ArticleTableViewController.swift */,
 				6CA9E3FA1EA5724C009FA609 /* ArticleTableViewCell.swift */,
+				6C3C815B1EA729CE008E6D10 /* RSSParser.swift */,
 			);
 			path = SeeMeScrollin;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CA9E3F91EA571FF009FA609 /* ArticleTableViewController.swift in Sources */,
+				6C3C815C1EA729CE008E6D10 /* RSSParser.swift in Sources */,
 				6CA9E3DB1EA535CB009FA609 /* AppDelegate.swift in Sources */,
 				6CA9E3FB1EA5724C009FA609 /* ArticleTableViewCell.swift in Sources */,
 				6CA9E3F51EA56D0E009FA609 /* Article.swift in Sources */,

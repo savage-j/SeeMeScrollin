@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireRSSParser
 
 class ArticleTableViewController: UITableViewController {
 
     var articles = Article.importArticles()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,11 @@ class ArticleTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func loadRSSFeed(_ sender: Any) {
+        RSSParser.getRSSFeedResponse(path: "https://itunes.apple.com/us/rss/toptvseasons/limit=10/genre=4000/xml") { (rssFeed: RSSFeed?, status: NetworkResponseStatus) in
+            print(rssFeed)
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
