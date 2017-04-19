@@ -348,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 865582EF1F647A9495C79378 /* Pods-SeeMeScrollin.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NXUBBPUQV8;
 				INFOPLIST_FILE = SeeMeScrollin/Info.plist;
@@ -362,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6FA00EBD573AD4877BA3761C /* Pods-SeeMeScrollin.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NXUBBPUQV8;
 				INFOPLIST_FILE = SeeMeScrollin/Info.plist;
@@ -391,6 +393,7 @@
 				6CA9E3EB1EA535CB009FA609 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
