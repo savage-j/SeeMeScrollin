@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="213"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I9t-iW-tsk" id="Q15-Z3-iWJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="212"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16O-Hg-KRY">
@@ -50,6 +50,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="J36-IA-ir8">
+                        <barButtonItem key="leftBarButtonItem" title="Fake Data" id="xKd-D0-Naj">
+                            <connections>
+                                <action selector="loadFakeData:" destination="OKn-8A-eYH" id="oKk-jz-lgp"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="RSS" id="Eta-U4-41C">
                             <connections>
                                 <action selector="loadRSSFeed:" destination="OKn-8A-eYH" id="0ft-eP-JxR"/>

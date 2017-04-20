@@ -26,12 +26,27 @@ class ArticleTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    @IBAction func loadFakeData(_ sender: Any) {
+        self.articles = Article.importArticles()
+        tableView.reloadData()
+    }
 
     @IBAction func loadRSSFeed(_ sender: Any) {
-        RSSParser.getRSSFeedResponse(path: "https://itunes.apple.com/us/rss/toptvseasons/limit=10/genre=4000/xml") { (rssFeed: RSSFeed?, status: NetworkResponseStatus) in
-            print(rssFeed)
+        Alamofire.request("http://rss.cnn.com/rss/cnn_topstories.rss").responseRSS() { (response) -> Void in
+            if let feed: RSSFeed = response.result.value {
+                var newArticles = [Article]()
+                for item in feed.items {
+                    let article = Article(textInfo: item.title! as String, isExpanded: false)
+                    newArticles.append(article)
+                }
+                self.articles.removeAll()
+                self.articles.insert(contentsOf: newArticles, at: 0)
+                    
+            }
+            self.tableView.reloadData()
         }
     }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
